@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Sohal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/32b133679e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()" style="padding-left: 25px;"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Data Analyst</p> 
+            <h1>Hi, I'm <span>Sohal</span> <br>From India</h1>
+        </div>
+        <a href="https://drive.google.com/file/d/1G5fDHrIBfaulEd1OGwVkX68cp8cMTRYc/view?usp=share_link" class="btn">Resume</a>
+    </div>
+</div>
+
+<!-- ----------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                A Person with expertise in data analytical domain, who has
+                proven record of leveraging data to drive business results.
+                With expertise in data visualization, statistical analysis, and
+                predictive modeling, had built many projects with data-driven 
+                decisions that had led to specific achievements or
+                outcomes. Good proficiency in Python, Excel, SQL, and
+                Tableau and committed to staying up to date with the
+                latest industry trends and best practices.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Selenium.</li>
+                        <li><span>SQL</span><br>RDBMS, Database Connectivity, Complex Queries.</li>
+                        <li><span>Tableau</span><br>Visualization, Dashboards, Stories.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certificates">
+                    <ul>
+                        <li><span>Udemy</span><br>Python Bootcamp & Python for Data Science.</li>
+                        <li><span>LinkedIn Learning</span><br>Data Modeling & Database connectivity.</li>
+                        <li><span>Coursera</span><br>IBM Data Analyst Professional Certified.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Masai School</span><br>Career Oriented Program in Data Analytics.</li>
+                        <li><span>Apex University, Jaipur</span><br>Bachelor's in Computer Application.</li>
+                        <li><span>NPS, Jaipur</span><br>High School.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------projects------------ -->
+<div id="portfolio">
+    <div class="container">
+        <div class="sub-title">My Projects</div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/project1.png">
+                <div class="layer">
+                    <h3>IPL Data Analysis</h3>
+                    <p>hello just wait for while i will give you update</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/project2.png">
+                <div class="layer">
+                    <h3>LinkedIn Job Analysis</h3>
+                    <p>hello just wait for while i will give you update</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>            
+            </div>
+            <div class="work">
+                <img src="images/project3.png">
+                <div class="layer">
+                    <h3>Infosys and TCS Stocks Analysis</h3>
+                    <p>hello just wait for while i will give you update</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <a href="https://www.linkedin.com/in/mohammad-sohal-5b8b38224/" class="connect"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/sohal619" class="connect"><i class="fa-brands fa-square-github"></i></a>
+    <a href="mailto:markvalloway9@gmail.com" class="connect"><i class="fa-solid fa-square-envelope"></i></a>
+</div>
+<p align="center">Copyright &copy; SOHAL 2023</p>
+
+<!-- ------------- go up button --------------- -->
+<a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add('active-tab');
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else{
+            toTop.classList.remove("active")
+        }
+    })
+</script>
+</body>
+</html>
